@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h> 
+float media
 int main()
 {
 SetConsoleOutputCP(65001);
