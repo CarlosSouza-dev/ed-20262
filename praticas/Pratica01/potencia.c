@@ -1,21 +1,27 @@
 #include <stdio.h>
-#include <locale.h> 
+float calcular_potencia(float base, int expoente){
+    float result = 1.0;
+    for (int i = 0; i < expoente; i++){
+        result = result * base;
+    }
+
+    return result;
+}
 int main()
 {
-    setlocale(LC_ALL, "Portuguese");
-    float base;
-    int expoente;
-    float result = 1.0;
-printf("================================================== \n");
-printf("Para calcular uma potência, siga as instruções: \n");
-printf("================================================== \n");
-printf("1- Digite uma Base: ");
-scanf("%f", &base);
-printf("Digite um expoente: ");
-scanf("%d", &expoente);
-for (int i = 0; i < expoente; i++){
-    result = result * base;
-}
-printf("O resultado é: %.2f", result);
+    float potencia = calcular_potencia(1.0f, 5);
+    printf("base: 1.0, expoente: 5, resultado: %.2f\n", potencia);
+    
+    potencia = calcular_potencia(2.0f, 4);
+    printf("base: 2.0, expoente: 4, resultado: %.2f\n", potencia);
+    
+    potencia = calcular_potencia(3.0f, 4);
+    printf("base: 3.0, expoente: 4, resultado: %.2f\n", potencia);
+    
+    potencia = calcular_potencia(6.0f, 2);
+    printf("base: 6.0, expoente: 2, resultado: %.2f\n", potencia);
+    
+    potencia = calcular_potencia(10.0f, 0);
+    printf("base: 10.0, expoente: 0, resultado: %.2f\n", potencia);
     return 0;
 }
