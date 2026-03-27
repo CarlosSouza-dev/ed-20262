@@ -8,7 +8,6 @@ float calcula_media_aritmetica(int n){
             scanf("%f", &vet[i]);
             soma += vet[i];
         }
-        
     return soma / n;
     }
  
