@@ -1,32 +1,28 @@
 #include <stdio.h>
-float calcula_media_aritmetica(int n){
+float calcula_media_aritmetica(int n, float valores[]){
     float soma = 0.0f;
-    float vet[100];
+
     for (int i = 0; i < n; i++){
-        printf("n = %d, informe o %dº numero: ", n, i + 1);
-            scanf("%f", &vet[i]);
-            soma += vet[i];
+            soma += valores[i];
         }
+
     return soma / n;
     }
  
-int main()
-{
+int main(){
     
-    float media = calcula_media_aritmetica(3);
+    float media = calcula_media_aritmetica(5, (float[]){7.0, 8.0, 6.0, 10.0, 70,0});
     printf("A media aritmetica e: %.2f\n", media);   
     printf("\n");
 
-    media = calcula_media_aritmetica(4);
+    media = calcula_media_aritmetica(6, (float[]){1.0, 81.0, 60.0, 10.0, 70,0});
     printf("A media aritmetica e: %.2f\n", media);   
     printf("\n");
     
-    media = calcula_media_aritmetica(5);
+    media = calcula_media_aritmetica(5, (float[]){2.0, 5.0, 45.0, 142.0, 7.0});
     printf("A media aritmetica e: %.2f\n", media);   
     printf("\n");
-
-    media = calcula_media_aritmetica(6);
-    printf("A media aritmetica e: %.2f\n", media);   
+ 
 
     return 0;
 }
