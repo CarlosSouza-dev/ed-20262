@@ -30,4 +30,7 @@ int main(){
     }
     
         return 0;
-}
+/*
+Melhor Caso: O(1) melhor cenário possível ocorre quando o número que o usuário digitou está exatamente na primeira posição do vetor (índice 0). O algoritmo faz apenas $1$ comparação, encontra o valor, e o loop é encerrado imediatamente. O tempo de execução é constante, independentemente do tamanho do vetor.
+Pior Caso: O(n) pior cenário ocorre em duas situações: quando o número procurado é o último elemento do vetor, ou quando ele não existe no vetor. Em ambos os casos, o algoritmo é forçado a percorrer todas as n posições. O tempo de execução cresce linearmente de forma proporcional ao tamanho do vetor. Se o vetor tivesse 1 milhão de posições, ele faria 1 milhão de comparações.
+*/
