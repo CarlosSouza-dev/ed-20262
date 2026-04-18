@@ -4,7 +4,7 @@
 int busca_sequencial(int vet[], int tamanho, int alvo){
     for (int i = 0; i < tamanho; i++){
         if (vet[i] == alvo){
-            return vet[i];
+            return i;
         }        
     }
     return -1;
